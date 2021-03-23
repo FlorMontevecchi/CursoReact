@@ -1,0 +1,11 @@
+{
+  "name": "coderreact",
+  "version": "2.0.0",
+  "description": "prueba de NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
