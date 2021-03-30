@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Item = ({ item }) => {
   return (
@@ -8,6 +9,9 @@ export const Item = ({ item }) => {
         <h5 className="card-title">{item.title}</h5>
         <div class="price text-success"><h5 class="mt-4">${item.price}</h5></div>
       </div>
+      
+      <Link to={`/item/${item.id}`}> Link al item</Link>
+
     </div>
   );
 };
