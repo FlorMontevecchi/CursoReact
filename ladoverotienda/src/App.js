@@ -24,9 +24,6 @@ function App() {
               <ItemDetailContainer />
           </Route>
 
-          <Route path='*' >
-            404
-          </Route>
         </Switch>
       </div>
     </BrowserRouter>

@@ -3,13 +3,13 @@ import ItemDetail from '../ItemDetail';
 import { useParams } from "react-router-dom";
 
 
-const getItems = () => { 
+const getItems = (id) => { 
     return new Promise((resolve)=>{
         setTimeout(()=>{resolve({
             title:"Descuento delicioso",
             price: 70,
-            description: "Para cada segunda unidad!",
-            img:""
+            description: "Para cada segunda unidad!" + id,
+            img:"" 
 
         })},2000)
     })

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 
 export function ItemCount({ stock, initial, onAdd }) {
   const [count, setCount] = useState(parseInt(initial));
-     useEffect(() => {
+     /*useEffect(() => {
        setCount(parseInt(initial));
        return;
-     }, [initial]);
+     }, [initial])*/
 
   const addHandle = () => {
     setCount(count + 1);
@@ -13,6 +13,10 @@ export function ItemCount({ stock, initial, onAdd }) {
  
   const removeHandle = () => {
     setCount(count - 1);
+  };
+
+  const agregar = () => {
+    onAdd(count)
   };
 
   return (
@@ -37,10 +41,9 @@ export function ItemCount({ stock, initial, onAdd }) {
         </button>
       </div>
       <button
-        disabled={count >= 1}
         className="btn btn-outline-primary w-75"
         type="button"
-        onClick={onAdd}
+        onClick={agregar }
       >
         Agregar al carrito
       </button>

@@ -6,24 +6,24 @@ import {Link, NavLink} from 'react-router-dom';
 export const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#Home">
-        Ladovero Tienda
-      </a>
+    <Link to='/' className="navbar-brand" >
+      Ladovero tienda
+    </Link>
 
-      <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div className="navbar-nav">
-          <a className="nav-item nav-link active" href="#Home">
-            Hamburguesas
-          </a>
-          <a className="nav-item nav-link" href="#Courses">
-            Empanadas
-          </a>
-          <a className="nav-item nav-link" href="#Consulting">
-            Pizzas
-          </a>
-        </div>
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav">
+        <NavLink exact to='/' activeClassName="active pepe" className="nav-item nav-link" >
+          Home
+        </NavLink>
+        <NavLink to={`/category/cate1`} activeClassName="active" className="nav-item nav-link" >
+          Empanadas
+        </NavLink>
+        <NavLink to={`/category/cate2`} activeClassName="active" className="nav-item nav-link" >
+          Hamburguesas
+        </NavLink>
       </div>
-      <CartWidget />
+    </div>
+    <CartWidget />
 
       <button
         class="navbar-toggler"

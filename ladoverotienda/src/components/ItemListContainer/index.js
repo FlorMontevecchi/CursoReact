@@ -26,13 +26,12 @@ export default function ItemListContainer() {
       setItems(resultado)
     })
 
-  })
+  },[])
 
   return (
     <div className="container ">
-      
+      Items de la categoria {categoryId}
       <ItemList items={items}/>
-      <ItemCount stock="6" initial="2" />
     </div>
   );
 }
