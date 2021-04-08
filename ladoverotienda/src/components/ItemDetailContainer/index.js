@@ -24,7 +24,7 @@ export default function ItemDetailContainer() {
         return;
     }, [itemId])
 
-   
+
      return <> {itemId} - {otroId}
      <ItemDetail item={item} /></>
     }

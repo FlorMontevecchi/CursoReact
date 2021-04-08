@@ -7,12 +7,13 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
+    
     <BrowserRouter >
       <div className="App">
-    <NavBar />
+      <NavBar />
         <Switch >
           <Route exact path='/'>
-            ¡Bienvenido!
+          Bienvenido!
           </Route>
 
           <Route  path='/category/:categoryId'>
@@ -20,9 +21,10 @@ function App() {
           </Route>
 
 
-          <Route path='/item/:itemId/:otroId' >
+          <Route path='/item/:itemId' >
               <ItemDetailContainer />
           </Route>
+
 
         </Switch>
       </div>

@@ -7,7 +7,7 @@ export const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <Link to='/' className="navbar-brand" >
-      Ladovero tienda
+      <h1>Ladovero tienda</h1>
     </Link>
 
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -15,10 +15,10 @@ export const NavBar = () => {
         <NavLink exact to='/' activeClassName="active pepe" className="nav-item nav-link" >
           Home
         </NavLink>
-        <NavLink to={`/category/cate1`} activeClassName="active" className="nav-item nav-link" >
+        <NavLink to={`/category/empanadas`} activeClassName="active" className="nav-item nav-link" >
           Empanadas
         </NavLink>
-        <NavLink to={`/category/cate2`} activeClassName="active" className="nav-item nav-link" >
+        <NavLink to={`/category/hamburguesas`} activeClassName="active" className="nav-item nav-link" >
           Hamburguesas
         </NavLink>
       </div>

@@ -7,10 +7,12 @@ export const Item = ({ item }) => {
       <img src={item.pictureUrl} alt="" style={{width: "12rem"}} />
       <div className="card-body">
         <h5 className="card-title">{item.title}</h5>
-        <div class="price text-success"><h5 class="mt-4">${item.price}</h5></div>
+        <div className="price text-success"><h5 class="mt-4">${item.price}</h5></div>
       </div>
       
-      <Link to={`/item/${item.id}`}> Link al item</Link>
+      
+      <Link to={`/item/${item.id}`}>Link al producto</Link>
+
 
     </div>
   );
