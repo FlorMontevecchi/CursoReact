@@ -1,17 +1,17 @@
 import React, {useState,useContext}from 'react'
 import {ItemCount} from '../ItemCount'
 import {Link} from 'react-router-dom';
-/*import { CartContext } from "../../context/CartContext";*/
+import { CartContext } from "../../context/CartContext";
 
 
 export default function ItemDetail({ item }) {
     const [count, setCount] = useState(0)
 
-    /*const {addItem, cart} = useContext(CartContext);*/
+    const {addItem, cart} = useContext(CartContext);
 
     const addHandler = (contador)=>{
         console.log('se agrego un item', contador)
-        /*addItem(item, contador)*/
+        addItem(item, contador)
         setCount(contador)
     }
 
@@ -23,13 +23,12 @@ export default function ItemDetail({ item }) {
             <p>{item?.description}</p>
             <div>${item?.price}</div>
             
-            { count == 0 ?
+            {count == 0 ?
                     <ItemCount stock="6" initial="2" onAdd={addHandler} />
                         :
                         <Link to='/cart' >
                             <button >Terminar mi compra</button>
                         </Link> 
-
             }
             
 
