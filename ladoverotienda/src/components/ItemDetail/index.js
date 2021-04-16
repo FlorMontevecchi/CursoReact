@@ -30,8 +30,5 @@ export default function ItemDetail({ item }) {
                             <button >Terminar mi compra</button>
                         </Link> 
             }
-            
-
   </>;
-   
-  }
+}
